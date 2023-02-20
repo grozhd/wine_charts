@@ -1,15 +1,78 @@
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.2"></script>
 </head>
 <body>
-  <div>
-    <h2>1. Terra di Monteverro</h2><br>
-    Name: Terra di Monteverro<br>
-    Year: 2014
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Wine Tasting: 17.02.2023</h1>
   </div>
+  
+  
+  <div class="row">
+    <div class="col-xs-1">
+      <img src="images/terra_di_monteverro.png" alt="Lights" style="height:200">
+    </div>
+    <div class="col-xs-5">
+      <h3>Terra di Monteverro</h3>
+      Producer: Monteverro<br>
+      Country: Italy<br>
+      Region: Toscana<br>
+      Year: 2014<br>
+      Blend: 40% Cabernet Sauvignon, 35 % Cabernet Franc, 20% Merlot, 5% Petit Verdot<br>
+      Price: 32 CHF
+    </div>
+    <div class="col-xs-1">
+      <img src="images/chateau_lynch_moussas.png" alt="Lights" style="height:200">
+    </div>
+    <div class="col-xs-5">
+      <h3>Château Lynch-Moussas</h3>
+      Producer: Château Lynch-Moussas
+      Country: France<br>
+      Region: Bordeaux<br>
+      Year: 2016<br>
+      Blend: 83% Cabernet Sauvignon,  17% Merlot<br>
+      Price: 36 CHF
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-xs-1">
+      <img src="images/batasiolo_barolo_cerequio.png" alt="Lights" style="height:200">
+    </div>
+    <div class="col-xs-5">
+      <h3>Barolo Cerequio</h3>
+      Producer: Beni di Batasiolo<br>
+      Country: Italy<br>
+      Region: Piemont<br>
+      Year: 2011<br>
+      Blend: 100% Nebbiolo<br>
+      Price: 44 CHF
+    </div>
+    <div class="col-xs-1">
+      <img src="images/chateau_lynch_moussas.png" alt="Lights" style="height:200">
+    </div>
+    <div class="col-xs-5">
+      <h3>Fusion V</h3>
+      Producer: De Toren<br>
+      Country: South Africa<br>
+      Region: Stellenbosch<br>
+      Year: 2017<br>
+      Blend: 52% Cabernet Sauvignon, 16% Malbec, 14% Cabernet Franc, 11% Merlot, 7% Petit Verdot<br>
+      Price: 54 CHF
+    </div>
+  </div>
+  <br>
+  
+
   <div id="vis"/>
   <script>
     const spec = {
@@ -741,5 +804,8 @@
 };
     vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
   </script>
+
+  </div>
+</div>  
 </body>
 </html>
